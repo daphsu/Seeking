@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+
+    <title>Multiplicity Friction Interaction</title>
+  </head>
+
+  <body>
+    <div class="nav">
+      <!-- HELLO -->
+      <div class="section">
+        <input
+          type="radio"
+          id="helloRadio"
+          name="section"
+          onclick="callHelloOnClick()"
+        />
+        <label for="Hello">Hello</label>
+      </div>
+      
+      <!-- SEEKING -->
+      <div class="section">
+        <input
+          type="radio"
+          id="seekingRadio"
+          name="section"
+          onclick="callSeekingOnClick()"
+        />
+        <label for="Seeking">Seeking Comfort in an Uncomfortable Chair</label
+        ><br />
+          <div id="seekingMenu">
+        <div class="subnav">
+          <!-- MULTIPLICITY -->
+          <input
+            type="checkbox"
+            id="checkMultiplicity"
+            name="Seeking"
+            value="checkMultiplicity"
+          />
+          <label for="Multiplicity">Multiplicity</label><br />
+          <!-- ... -->
+          <input
+            type="checkbox"
+            id="checkMultiplicityMore"
+            name="Seeking"
+            value="checkMultiplicityMore"
+          />
+          <label for="multiplicityMore">...</label>
+        </div>
+
+        <div class="subnav">
+          <!-- FRICTION -->
+          <input
+            type="checkbox"
+            id="checkFriction"
+            name="Seeking"
+            value="checkFriction"
+          />
+          <label for="Friction">Friction</label><br />
+          <!-- ... -->
+          <input
+            type="checkbox"
+            id="checkFrictionMore"
+            name="Seeking"
+            value="checkFrictionMore"
+          />
+          <label for="Friction">...</label>
+        </div>
+        <div class="subnav">
+          <!-- INTERACTION -->
+          <input
+            type="checkbox"
+            id="checkInteraction"
+            name="Seeking"
+            value="checkInteraction"
+          />
+          <label for="Interaction">Interaction</label><br />
+          <!-- ... -->
+          <input
+            type="checkbox"
+            id="checkInteractionMore"
+            name="Seeking"
+            value="checkInteractionMore"
+          />
+          <label for="Interaction">...</label>
+        </div>
+      </div>
+    </div>
+      <div class="section">
+        <input
+          type="radio"
+          id="whatRadio"
+          name="section"
+          onclick="callWhatOnClick()"
+          checked
+        />
+        <label for="What">What chair?</label><br />
+        <div id="whatMenu">
+        <div class="subnav">
+          <!-- TRUTHS -->
+          <input type="checkbox" id="checkTruths" name="What" value="checkTruths" checked/>
+          <label for="Multiple Truths?">Multiple truths?</label>
+          <!-- POWER -->
+          <input type="checkbox" id="checkPower" name="What" value="checkPower" checked/>
+          <label for="Friction?">Shift power?</label>
+          <!-- CONNECT -->
+          <input type="checkbox" id="checkConnect" name="What" value="checkConnect" checked/>
+          <label for="Connect?">Connect?</label>
+        </div>
+      </div>
+      </div>
+
+      <!-- DRAWING -->
+      <div class="easterEgg">
+        <input
+          type="radio"
+          id="drawRadio"
+          name="section"
+          onclick="callDrawOnClick()"
+        />
+    </div>
+
+    <div id="hello">
+      <div class="wrapper">
+        <div class="left">
+          <div class="row">
+            <div class="colG">
+              <h1>Hi, my name is Daphne Hsu.</h1>
+            </div>
+            <div class="colH">
+              <h1>
+                This is the site for my position presentation, created
+                fall 2020.
+              </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="colH">
+              <h1 id="time"></h1>
+            </div>
+            <div class="colI">
+              <h1>It's sunny in Providence.</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="colI">
+              <h1>Check out my <a href="https://drive.google.com/file/d/1IYiQPwnX8OYGbg8dAhkgQaHwqpI8GaKx/view?usp=sharing" target="_blank" style="color: #0000ff"> thesis compendium</a> from spring 2020.</h1>
+            </div>
+            <div class="colG">
+              <h1>
+                Write to me at
+                <a href="mailto:dhsu01@risd.edu" style="color: #1e1ea0"
+                  >dhsu01@risd.edu</a
+                >.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="seeking">
+      <div class="wrapper">
+        <div class="left">
+          <div class="row">
+            <div class="colA" id="multiplicity">
+              <h1>Multiplicity</h1>
+            </div>
+            <div class="colB" id="multiplicityMore">
+              <p>
+                Using a system as subject matter and variables like
+                ways of communicating, mediums, and interactive
+                experiences, I’ve combined elements in multiple ways. Or, I’ve
+                pushed the same subject matter through different forms to
+                achieve multiple readings.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="colC" id="friction">
+              <h1>Friction</h1>
+            </div>
+            <div class="colA" id="frictionMore">
+              <p>
+                Defining friction as an area of discomfort or limitation in
+                personal agency within a system, I with points of resistance to
+                make sense of their sources. I hope to open up possibilities of
+                addressing, fixing, or overcoming these frictions.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="colB" id="interaction">
+              <h1>Interaction</h1>
+            </div>
+            <div class="colC" id="interactionMore">
+              <p>
+                The places we inhabit are socially constructed and hold lots of
+                histories. Design can create space for engagement among people
+                to explore our varied and shared contexts and create moments of
+                connection.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <img
+            id="munari"
+            src="images/SeekingComfortInAnUncomfortableChair.jpg"
+            width="542"
+            style="margin-left: 200px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="what">
+      <div class="wrapper">
+        <div class="left">
+          <div class="row">
+            <div class="colD" id="truths">
+              <h1>
+                <i
+                  >How can a multiplicity of voices and forms create space for
+                  nuance and multiple truths?</i
+                >
+              </h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="colE" id="power">
+              <h1>
+                <i
+                  >How can recontexutalizing experiences serve to shift power in
+                  order for us to see new possibilities of interacting and
+                  being?</i
+                >
+              </h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="colF" id="connect">
+              <h1>
+                <i
+                  >How can moments of interaction and engagement connect people
+                  to each other and to the systems that they interface with
+                  every day?</i
+                >
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <video width="900px" controls autoplay loop muted><source src="images/zoom_hug.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+    </div>
+
+    <div id="draw">
+      <div class="wrapper">
+        <div class="left">
+          <div class="row">
+            <div class="colH">
+              <p>Using the color blocks draw the scene outside your nearest window.</p>
+            </div>
+            <div class="colG">
+              <p>
+                Send me a screenshot of your drawing at <a href="mailto:dhsu01@risd.edu" style="color: #1e1ea0">dhsu01@risd.edu</a>.
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="row">
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" />
+          <input type="color" id="gradient" value="#0000ff" /><br>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>

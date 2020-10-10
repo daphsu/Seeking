@@ -1,0 +1,147 @@
+body {
+  font-family: "IBM Plex Mono", monospace;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.nav {
+  font-size: 12px;
+  color: #696969;
+  height: 85px;
+  width: 100%;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+
+.section {
+  display: inline-block;
+}
+
+.easterEgg {
+  float: right;
+}
+
+.subnav {
+  float: left;
+}
+
+label {
+  margin-right: 40px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.left {
+  width: 700px;
+  /* right: 50%; */
+}
+
+.row {
+  display: inline-block;
+}
+
+.colA,
+.colB,
+.colC {
+  width: 260px;
+  height: 270px;
+  float: left;
+  margin-right: 40px;
+  visibility: hidden;
+}
+
+.colA {
+  color: #0000ff;
+}
+
+.colB {
+  color: #5757f2;
+}
+
+.colC {
+  color: #1e1ea0;
+}
+
+.colD,
+.colE,
+.colF {
+  width: 560px;
+  height: 270px;
+  float: left;
+  margin-right: 40px;
+}
+
+.colD {
+  color: #0000ff;
+}
+
+.colE {
+  color: #5757f2;
+}
+
+.colF {
+  color: #1e1ea0;
+}
+
+.colG,
+.colH,
+.colI {
+  width: 260px;
+  height: 270px;
+  float: left;
+  margin-right: 40px;
+}
+
+.colG {
+  color: #1e1ea0;
+}
+
+.colH {
+  color: #5757f2;
+}
+
+.colI {
+  color: #0000ff;
+}
+
+.right {
+  /* width: 900px; */
+  /* margin-left: auto;
+  margin-right: auto;
+  display: block; */
+}
+
+#hello,
+#seeking,
+#what {
+  position: absolute;
+}
+
+#hello,
+#seeking,
+#seekingMenu,
+#draw {
+  visibility: hidden;
+}
+
+#what,
+#whatMenu {
+  visibility: visible;
+}
+/* #business, #workin, #luckProcess, #luckShoot {
+    display: block;
+} */
